@@ -1,0 +1,13 @@
+<div class="container-bg">
+  <div class="container">
+    <h1 class='text-left'>Lists</h1>
+    <%= link_to 'Add a new List', new_list_path, class: 'btn btn-sm btn-success mb-5' %>
+    <% @lists.each do |list| %>
+      <%= link_to list_path(list), class: 'text-decoration-none text-success' do %>
+        <div class="card text-white bg-success mb-3">
+          <h2><%= list.name %></h2>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

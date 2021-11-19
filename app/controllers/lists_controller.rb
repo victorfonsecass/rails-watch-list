@@ -1,6 +1,5 @@
 class ListsController < ApplicationController
 
-
    # GET / TODAS AS LISTAS
   def index
     @lists = List.all
