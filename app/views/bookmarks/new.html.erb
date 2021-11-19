@@ -1,0 +1,10 @@
+<div class = 'container'>
+<h1>Add a new bookmark</h1>
+
+<%= simple_form_for [@list, @bookmark] do |f| %>  <!--preciso mostrar o caminho para o bookma-->
+  <%= f.input :comment %>
+  <%= f.association :movie %>
+  <%= f.submit 'submit a bookmark' %>
+<% end %>
+<%= link_to 'Back', list_path(@list), class: 'btn btn-outline-secondary mb-5' %>
+</div>

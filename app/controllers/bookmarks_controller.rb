@@ -1,7 +1,7 @@
 class BookmarksController < ApplicationController
 
   def new
-    @list = List.find(params[:list_id])# Como elas estão nestadas, QUANDO VOU CRIAR UM NOVO BOOKMARK, primeiro preciso encontrar o list_id
+    @list = List.find(params[:list_id]) # Como elas estão nestadas, QUANDO VOU CRIAR UM NOVO BOOKMARK, primeiro preciso encontrar o list_id
     # LIST ID É A CHAVE ESTRANGEIRA LIGANDO OS MODELS
     @bookmark = Bookmark.new # para então criar um book mark
   end

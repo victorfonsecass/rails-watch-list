@@ -1,0 +1,12 @@
+<div class = 'container'>
+<h1>Lista dos favoritos</h1>
+
+<h2>Adicione um nome para a sua lista</h2>
+<%= simple_form_for @list do |f|%>
+<%= f.input :name %>
+
+<%= f.submit  %> <!-- esse submit está relacioando ao create-->
+<% end %>
+
+<%= link_to 'back', lists_path, class: 'btn btn-outline-secondary mb-5' %>
+</div>
