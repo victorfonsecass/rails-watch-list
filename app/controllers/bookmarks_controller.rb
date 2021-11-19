@@ -29,6 +29,3 @@ class BookmarksController < ApplicationController
     params.require(:bookmark).permit(:comment, :movie_id)
   end
 end
-
-
-end
