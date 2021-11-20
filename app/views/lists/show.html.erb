@@ -1,21 +1,23 @@
 <div class="container">
-<h1>
-  <strong>Name:</strong>
-  <%= @list.name %>
-</h1>
 
-<%= link_to 'Back', lists_path %>
+  <h1>
+    <strong>Name:</strong>
+      <%= @list.name %>
+  </h1>
 
-<h3>Bookmarks</h3>
-<%= link_to 'Create a new bookmarker', new_list_bookmark_path(@list) %> |
-<% @list.bookmarks.each do |bookmark| %>
-  <div class="card mb-3">
-    <p><%= bookmark.comment %>
-    <%= image_tag(bookmark.movie.poster_url, size: '100x100') %>
-    <%= link_to 'delete', bookmark_path(bookmark),
-      method: :delete,
-      data: {confirm: 'Are you sure?'},
-      class: 'btn btn-danger btn-sm' %></p>
-  </div>
-<% end %>
+  <%= link_to 'Back', lists_path %>
+
+  <h3>Bookmarks</h3>
+  <%= link_to 'Create a new bookmarker', new_list_bookmark_path(@list) %>
+    <% @list.bookmarks.each do |bookmark| %>
+      <div class="card mb-3">
+        <p><%= bookmark.comment %>
+          <%= image_tag(bookmark.movie.poster_url, size: '100x100') %>
+            <%= link_to 'delete', bookmark_path(bookmark),
+              method: :delete,
+              data: {confirm: 'Are you sure?'},
+              class: 'btn btn-danger btn-sm' %></p>
+      </div>
+    <% end %>
+
 </div>
