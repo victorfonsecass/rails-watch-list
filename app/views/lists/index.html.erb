@@ -1,27 +1,25 @@
-<div class="container-bg">
+
   <div class="container">
 
     <div class="card-category">
        <h1>
         <span id='banner-typed-text'></span>
       </h1>
-      <p> Crie sua p´ropria lista de filmes </p>
     </div>
 
-      <div class="list-create">
-        <h2>Lists</h2>
+    <div class="lists_create">
+        <p>Lists</p>
         <%= link_to 'Create a movie list', new_list_path, class: 'btn btn-outline-primary mb-5' %>
-      </div>
+    </div>
 
-      <div>
-        <% @lists.each do |list| %>
-          <%= link_to list_path(list), class: 'text-decoration-none text-success' do %>
-            <div class="card text-white bg-success mb-3">
-              <h2><%= list.name %></h2>
-            </div>
-          <% end %>
+    <div class="card-product" >
+      <% @lists.each do |list| %>
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <%= link_to list_path(list), class: 'text-decoration-none' do %>
+        <h2><%= list.name %></h2>
         <% end %>
-      </div>
-  </div>
+      <% end %>
+    </div>
 
+  </div>
 </div>
